@@ -42,10 +42,12 @@ class Ball{
   
   void bounce(){
     if( !boundsH() ){
-      dx = -dx;
+      x -= dx;
+      dx = -dx;   
     }
     else{
-      dy = -dy;
+      y -= dy;
+      dy = -dy; 
     }
   }
   /*
