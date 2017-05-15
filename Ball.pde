@@ -13,7 +13,7 @@ class Ball{
   Ball(){
     c = color(r , g , b);
     fill(c);
-    rad = 10;
+    rad = 50;
     x = random(width - rad);
     y = random(height - rad);
     dx = random(20);
@@ -32,6 +32,8 @@ class Ball{
     if( boundsH() && boundsV() ){
       x += dx;
       y += dy;
+      fill(c);
+      ellipse(x,y,rad,rad);
     }
     else{
       bounce();
@@ -46,5 +48,19 @@ class Ball{
       dy = -dy;
     }
   }
+  /*
+  float getX(){
+    return x;
+  }
+  float getY(){
+    return y;
+  }
+  float getRad(){
+    return rad;
+  }
+  float getColor(){
+    return c;
+  }
+  */
   
 }

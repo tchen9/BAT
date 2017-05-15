@@ -1,4 +1,4 @@
-Ball[] a = new Ball[10];
+Ball[] a = new Ball[20];
 
 void setup() {
   background(0);
@@ -9,7 +9,9 @@ void setup() {
 }
 
 void draw() {
+  background(0);
   for (Ball b : a) {
     b.move();
+    //fill(b.getColor());
   }
 }
