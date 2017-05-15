@@ -1,5 +1,8 @@
 class Ball{
   
+  float r = random(250);
+  float g = random(250);
+  float b = random(250);
   color c;
   float rad;
   float x;
@@ -8,12 +11,14 @@ class Ball{
   float dy;
   
   Ball(){
-    c = random(255);
+    c = color(r , g , b);
+    fill(c);
     rad = 10;
     x = random(width - rad);
     y = random(height - rad);
     dx = random(20);
     dy = random(20);
+    ellipse( x , y , rad , rad );
   }
   
   boolean boundsH(){
@@ -34,7 +39,7 @@ class Ball{
   }
   
   void bounce(){
-    if( !boundsH ){
+    if( !boundsH() ){
       dx = -dx;
     }
     else{
